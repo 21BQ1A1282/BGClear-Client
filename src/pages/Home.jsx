@@ -1,3 +1,5 @@
+import { BgRemovalSteps } from "../components/BgRemovalSteps"
+import { BgSlider } from "../components/BgSlider"
 import { Header } from "../components/Header"
 
 export const Home = () => {
@@ -8,8 +10,10 @@ export const Home = () => {
             <Header />
 
             {/* Background removal steps section */}
+            <BgRemovalSteps />
 
             {/* Background removal slider section */}
+            <BgSlider />
 
             {/* Buy credits plan section */}
 
