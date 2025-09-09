@@ -34,3 +34,62 @@ export const steps = [
 export const categories = [
     "People", "Animals", "Graphics", "Products", "Cars"
 ];
+
+export const plans = [
+  {
+    planId: "basic",
+    planName: "Starter Membership",
+    subscriptionFee: 499,
+    includedCredits: "100 credits",
+    summary: "Our essential plan for individual creators.",
+    isPopularChoice: false,
+  },
+  {
+    planId: "premium",
+    planName: "Premium Membership",
+    subscriptionFee: 899,
+    includedCredits: "250 credits",
+    summary: "Our most popular plan for teams and businesses.",
+    isPopularChoice: true,
+  },
+  {
+    planId: "ultimate",
+    planName: "Ultimate Membership",
+    subscriptionFee: 1499,
+    includedCredits: "1000 credits",
+    summary: "Maximum capabilities for enterprise clients.",
+    isPopularChoice: false,
+  },
+];
+
+export const testimonials = [
+  {
+    id: 1,
+    quote:"This platform has transformed the way we handle our projects. The simplicity and accuracy are unmatched.",
+    author: "Emily Roberts",
+    handle: "@design_emily",
+  },
+  {
+    id: 2,
+    quote:"Our workflow is now smoother and faster than ever. The results consistently exceed our expectations.",
+    author: "James Anderson",
+    handle: "@dev_james",
+  },
+  {
+    id: 3,
+    quote:"I was blown away by the quality and attention to detail. It feels like we leveled up our entire business overnight.",
+    author: "Priya Sharma",
+    handle: "@priya_creates",
+  },
+];
+
+export const FOOTER_ICONS = [
+  {
+    url: "https://linkedin.com",
+    logo: "https://img.icons8.com/fluent/30/000000/linkedin-2.png",
+  },
+  {
+    url: "https://twitter.com",
+    logo: "https://img.icons8.com/fluent/30/000000/twitter.png",
+  },
+];

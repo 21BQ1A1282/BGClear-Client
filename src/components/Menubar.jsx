@@ -1,20 +1,21 @@
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { assets } from "../assets/assets.js";
 
-export const Menubar = () => {
+const Menubar = () => {
 
     const [menuOpen, setMenuOpen] = useState(false);
 
     return(
         <nav className="bg-white px-8 py-4 flex justify-between items-center">
             {/* Left side: logo + text */}
-            <div className="flex item-center space-x-2">
+            <Link className="flex item-center space-x-2" to="/">
                 <img src={assets.logo} alt="logo" className="h-8 w-8 object-contain cursor-pointer"/>
                 <span className="text-2xl font-semibold cursor-pointer bg-gradient-to-r from-red-500 via-orange-500 to-yellow-400 text-transparent bg-clip-text">
                     BGClear
                 </span>
-            </div>
+            </Link>
 
             {/* Right side: Action button*/}
             <div className="hidden md:flex items-center space-x-4">
@@ -48,3 +49,5 @@ export const Menubar = () => {
         </nav>
     )
 };
+
+export default Menubar;
