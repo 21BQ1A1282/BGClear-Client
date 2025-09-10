@@ -1,3 +1,4 @@
+import credits from "./credits.png";
 import video_banner from "./homepage-banner.mp4";
 import logo from "./logo.png";
 import people from "./people.png";
@@ -8,6 +9,7 @@ export const assets = {
     video_banner,
     people,
     people_org,
+    credits,
 }
 
 export const steps = [
