@@ -26,7 +26,7 @@ export const BgSlider = () => {
                     {categories.map((category) => (
                         <button key={category}
                                 className={`px-6 py-2 rounded-full font-medium ${activeCategory === category ? 'bg-white text-gray-800 shadow-sm': 'text-gray-600 hover:bg-gray-200'}`}
-                                onclick={() => setActiveCategory(category)}>
+                                onClick={() => setActiveCategory(category)}>
                             {category}
                         </button>
                     ))}

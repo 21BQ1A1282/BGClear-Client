@@ -20,6 +20,8 @@ const Menubar = () => {
         openSignIn({});
     }
 
+    
+
     return(
         <nav className="bg-white px-8 py-4 flex justify-between items-center">
             {/* Left side: logo + text */}
