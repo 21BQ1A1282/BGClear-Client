@@ -8,7 +8,7 @@ const UserSyncHandler = () => {
   const { isLoaded, isSignedIn, getToken } = useAuth();
   const { user } = useUser();
   const [synced, setSynced] = useState(false);
-  const {backendUrl} = useContext(AppContext);
+  const {backendUrl, loadUserCredits} = useContext(AppContext);
 
   useEffect(() => {
     const saveUser = async () => {
@@ -24,18 +24,20 @@ const UserSyncHandler = () => {
           email: user.primaryEmailAddress.emailAddress,
           firstName: user.firstName,
           lastName: user.lastName,
+          photoUrl: user.imageUrl,
         };
 
         await axios.post(
           `${backendUrl}/users`,
           userData,
           {
-            headers: { Authorization: `Bearer ${token}` },
+            headers: { "Authorization": `Bearer ${token}` },
           }
         );
 
 
         setSynced(true);
+        await loadUserCredits();
       } catch (error) {
         console.error("User sync failed", error);
         toast.error("User sync failed, please try again");
