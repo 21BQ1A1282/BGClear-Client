@@ -1,6 +1,10 @@
+import { useContext } from "react";
 import { assets } from "../assets/assets.js";
+import { AppContext } from "../context/AppContext.jsx";
 
 export const Header = () => {
+
+    const {removeBg} = useContext(AppContext);
 
     return(
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16">
@@ -35,6 +39,7 @@ export const Header = () => {
                         type="file" 
                         accept="image/*" 
                         id="upload1" 
+                        onChange={(e) => removeBg(e.target.files[0])}
                         hidden 
                     />
                     <label htmlFor="upload1" className="bg-gradient-to-r from-red-500 via-orange-500 to-yellow-400 text-white font-medium px-8 py-4 rounded-full cursor-pointer transition-transform hover:scale-105 hover:opacity-90 text-lg shadow-lg">
