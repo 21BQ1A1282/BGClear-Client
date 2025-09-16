@@ -1,7 +1,7 @@
 import { BgRemovalSteps } from "../components/BgRemovalSteps"
 import { BgSlider } from "../components/BgSlider"
 import { Header } from "../components/Header"
-import Pricing from "../components/pricing"
+import Pricing from "../components/Pricing"
 import Testimonials from "../components/Testimonials"
 import TryNow from "../components/TryNow"
 
