@@ -4,8 +4,9 @@ import { Route, Routes } from "react-router-dom";
 import Footer from "./components/Footer";
 import Menubar from "./components/Menubar";
 import UserSyncHandler from "./components/UserSyncHandler";
+import BuyCredits from "./pages/BuyCredits";
 import { Home } from "./pages/Home";
-import Result from "./pages/result";
+import Result from "./pages/Result";
 
 const App = () => {
   return(
@@ -15,6 +16,7 @@ const App = () => {
       <Toaster />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/pricing" element={<BuyCredits />} />
         <Route path="/result" element={
           <>
             <SignedIn>

@@ -4,19 +4,16 @@ import { plans } from "../assets/assets.js";
 import { AppContext } from "../context/AppContext.jsx";
 import { placeOrder } from "../service/OrderService.js";
 
-
-function Pricing() {
-
-  const {isSignedIn, getToken} = useAuth();
-  const {openSignIn} = useClerk();
-  const {loadUserCredits, backendUrl} = useContext(AppContext);
+function BuyCredits() {
+  const { isSignedIn, getToken } = useAuth();
+  const { openSignIn } = useClerk();
+  const { loadUserCredits, backendUrl } = useContext(AppContext);
 
   const handleOrder = async (planId) => {
     if (!isSignedIn) {
       return openSignIn();
     }
 
-    
     try {
       await placeOrder({
         planId,
@@ -29,7 +26,6 @@ function Pricing() {
     } catch (error) {
       console.error("Order placement failed:", error);
     }
-
   };
 
   return (
@@ -91,7 +87,10 @@ function Pricing() {
                 </ul>
 
                 {/* CTA Button */}
-                <button onClick={() => handleOrder(plan.planId)} className="w-full py-3 px-6 text-center text-white font-semibold rounded-full bg-gradient-to-r from-red-500 via-orange-500 to-yellow-400 shadow-lg hover:opacity-90 transition duration-300 ease-in-out transform hover:scale-105 cursor-pointer">
+                <button 
+                  onClick={() => handleOrder(plan.planId)} 
+                  className="w-full py-3 px-6 text-center text-white font-semibold rounded-full bg-gradient-to-r from-red-500 via-orange-500 to-yellow-400 shadow-lg hover:opacity-90 transition duration-300 ease-in-out transform hover:scale-105 cursor-pointer"
+                >
                   Choose Membership
                 </button>
               </div>
@@ -103,4 +102,4 @@ function Pricing() {
   );
 }
 
-export default Pricing;
+export default BuyCredits;
