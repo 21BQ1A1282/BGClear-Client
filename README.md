@@ -110,6 +110,6 @@ The frontend communicates with a Spring Boot backend through REST APIs:
 - Error Handling - User-friendly error messages and fallbacks
 
 ## ⚠️ Note
-This frontend requires the BGClear Backend to be running for full functionality.
+This frontend requires the [BGClear Backend](https://github.com/21BQ1A1282/BGClear-Server) to be running for full functionality.
 
 <h2 align="center"> 🎨 Transform Your Images Instantly with BGClear AI Magic </h2> 
